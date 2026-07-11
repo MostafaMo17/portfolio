@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mustafa — Frontend Angular Developer</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- ============ BACKGROUND LAYER ============ -->
+    <div class="bg-layer">
+        <div class="beam beam--blue"></div>
+        <div class="beam beam--purple"></div>
+        <div class="beam beam--blue-2"></div>
+        <div class="particle" style="top:15%; left:20%;"></div>
+        <div class="particle" style="top:35%; left:70%; animation-delay:1s;"></div>
+        <div class="particle" style="top:60%; left:40%; animation-delay:2s;"></div>
+        <div class="particle" style="top:75%; left:80%; animation-delay:3s;"></div>
+        <div class="particle" style="top:25%; left:55%; animation-delay:1.5s;"></div>
+    </div>
+
+    <!-- ============ FLOATING SIDEBAR (shared component) ============ -->
+    <nav class="sidebar glass">
+        <a href="#hero" class="sidebar__icon is-active" aria-label="Home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <path d="M9 22V12h6v10" />
+            </svg>
+        </a>
+        <a href="#about" class="sidebar__icon" aria-label="About">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" />
+            </svg>
+        </a>
+        <a href="#projects" class="sidebar__icon" aria-label="Projects">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+            </svg>
+        </a>
+        <a href="#skills" class="sidebar__icon" aria-label="Skills">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+        </a>
+        <a href="#contact" class="sidebar__icon" aria-label="Contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+            </svg>
+        </a>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section id="hero" class="hero">
+        <div class="hero__inner">
+
+            <!-- LEFT: text content -->
+            <div class="hero__content">
+                <!-- <div class="hero__avatar-wrap">
+          <img src="images/WhatsApp Image 2026-07-06 at 3.57.07 PM.jpeg" alt="Mustafa profile photo" class="hero__avatar" />
+        </div> -->
+
+                <span class="hero__eyebrow">Available for opportunities</span>
+
+                <h1 class="hero__title">
+                    Hi, I'm <span class="hero__title-gradient">Mustafa Mohamed Abdallah</span>
+                </h1>
+                <p class="hero__role">Frontend Angular Developer</p>
+                <p class="hero__desc">
+                    I build modern, high-performance web experiences with Angular and clean, scalable code —
+                    turning ideas into fast, polished interfaces.
+                </p>
+
+                <div class="hero__actions">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="https://drive.google.com/file/d/12mUEigIKeYu_Sn4Gi_A4QeiRp1f1z6fw/view?usp=sharing"
+                        target="_blank" rel="noopener" class="btn btn-secondary">Download CV</a>
+                </div>
+
+                <div class="hero__socials">
+                    <span class="hero__socials-label">Find me on</span>
+                    <div class="hero__socials-row">
+                        <a href="https://github.com/MostafaMo17" target="_blank" rel="noopener" class="social-icon"
+                            aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9c0-1.1.4-1.9 1-2.6-3.4-.4-7-1.7-7-7.4a5.8 5.8 0 0 1 1.5-4c-.2-.4-.7-2 .2-4 0 0 1.2-.4 4 1.5a13.7 13.7 0 0 1 7.3 0c2.7-1.9 3.9-1.5 3.9-1.5.8 2 .3 3.6.1 4a5.8 5.8 0 0 1 1.5 4c0 5.7-3.6 7-7 7.4.6.6 1 1.6 1 3.1V22" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mustafa-mohamed-a89126382" target="_blank" rel="noopener"
+                            class="social-icon" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4V8h4v1.5A5.9 5.9 0 0 1 16 8z" />
+                                <rect x="2" y="8" width="4" height="14" />
+                                <circle cx="4" cy="4" r="1.5" />
+                            </svg>
+                        </a>
+                        <a href="#contact" class="social-icon" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="M22 6l-10 7L2 6" />
+                            </svg>
+                        </a>
+                        <a href="https://drive.google.com/file/d/12mUEigIKeYu_Sn4Gi_A4QeiRp1f1z6fw/view?usp=sharing"
+                            target="_blank" rel="noopener" class="social-icon" aria-label="Download CV">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3v12" />
+                                <path d="M7 10l5 5 5-5" />
+                                <path d="M5 21h14" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: visual -->
+            <div class="hero__visual">
+                <div class="hero__visual-card glass">
+                    <img src="images/WhatsApp Image 2026-07-06 at 3.57.07 PM.jpeg" alt="Hero visual placeholder" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="about" class="about">
+        <div class="about__inner">
+
+            <!-- LEFT: text content -->
+            <div class="about__content">
+                <span class="about__eyebrow">Get to know me</span>
+                <h2 class="about__title">About Me</h2>
+                <p class="about__desc">
+                    I'm <strong>Mustafa Mohamed</strong>, a Frontend Angular Developer currently expanding
+                    into backend development with <strong>.NET</strong>. I recently built a full
+                    <strong>Food Waste Management & Sustainability</strong> with a teammate over four months
+                    . I also took part in an <strong>IEEE Hackathon</strong>,
+                    where our team designed and built a complete website from scratch in just four days.
+                    I care about clean code, smooth interfaces, and turning ideas into real products under pressure.
+                </p>
+
+                <div class="about__stats">
+                    <div class="stat-card glass">
+                        <span class="stat-card__value">5+</span>
+                        <span class="stat-card__label">Projects<br>Completed</span>
+                    </div>
+                    <div class="stat-card glass">
+                        <span class="stat-card__value">1</span>
+                        <span class="stat-card__label">Hackathon<br>(IEEE)</span>
+                    </div>
+                    <div class="stat-card glass">
+                        <span class="stat-card__value">5+</span>
+                        <span class="stat-card__label">Technologies<br>Used</span>
+                    </div>
+                    <div class="stat-card glass">
+                        <span class="stat-card__value">4</span>
+                        <span class="stat-card__label">Team<br>Collaborations</span>
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn btn-primary">Let's Talk</a>
+            </div>
+
+            <!-- RIGHT: visual -->
+            <div class="about__visual">
+                <div class="about__visual-card glass">
+                    <img src="images/WhatsApp Image 2026-07-06 at 5.18.34 PM.jpeg"
+                        alt="Mustafa working illustration placeholder" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============ PROJECTS SECTION ============ -->
+    <section id="projects" class="projects">
+        <div class="projects__inner">
+            <div class="projects__header">
+                <span class="projects__eyebrow">My Work</span>
+                <h2 class="projects__title">Featured Projects</h2>
+                <p class="projects__desc">
+                    A selection of real, live projects I've built — previews below are the actual sites, running live.
+                </p>
+            </div>
+
+            <div class="projects__grid">
+
+                <!-- Project 1: Rescue IT -->
+                <div class="project-card glass">
+                    <div class="project-card__frame">
+                        <div class="project-card__bar">
+                            <span class="project-card__dot"></span>
+                            <span class="project-card__dot"></span>
+                            <span class="project-card__dot"></span>
+                            <span class="project-card__url">rescueit.vercel.app</span>
+                        </div>
+                        <div class="project-card__preview">
+                            <iframe src="https://rescueit.vercel.app/" title="Rescue IT live preview"
+                                loading="lazy"></iframe>
+                            <div class="project-card__preview-overlay">
+                                <span class="project-card__live-tag">
+                                    <span class="project-card__live-dot"></span>
+                                    Live Preview
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__category">Food Sustainability</span>
+                        <h3 class="project-card__title">Rescue IT</h3>
+                        <p class="project-card__desc">
+                            A platform that connects surplus food from restaurants and stores with charities and
+                            people in need — cutting food waste while making meals accessible at lower prices.
+                        </p>
+                        <a href="https://rescueit.vercel.app/" target="_blank" rel="noopener"
+                            class="project-card__link">
+                            View Live Demo
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 17L17 7" />
+                                <path d="M7 7h10v10" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Karma Wedding Planner -->
+                <div class="project-card glass">
+                    <div class="project-card__frame">
+                        <div class="project-card__bar">
+                            <span class="project-card__dot"></span>
+                            <span class="project-card__dot"></span>
+                            <span class="project-card__dot"></span>
+                            <span class="project-card__url">wedding-planner-iota-ivory.vercel.app</span>
+                        </div>
+                        <div class="project-card__preview">
+                            <iframe src="https://wedding-planner-iota-ivory.vercel.app/"
+                                title="Karma Wedding Planner live preview" loading="lazy"></iframe>
+                            <div class="project-card__preview-overlay">
+                                <span class="project-card__live-tag">
+                                    <span class="project-card__live-dot"></span>
+                                    Live Preview
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__category">Event Planning</span>
+                        <h3 class="project-card__title">Karma Wedding Planner</h3>
+                        <p class="project-card__desc">
+                            A wedding planning platform that helps couples organize every detail of their big day
+                            in one seamless place, from vendors to schedules.
+                        </p>
+                        <a href="https://wedding-planner-iota-ivory.vercel.app/" target="_blank" rel="noopener"
+                            class="project-card__link">
+                            View Live Demo
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 17L17 7" />
+                                <path d="M7 7h10v10" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILLS SECTION ============ -->
+    <section id="skills" class="skills">
+        <div class="skills__inner">
+
+            <div class="skills__header">
+                <span class="skills__eyebrow">What I Know</span>
+                <h2 class="skills__title">Technical Skills</h2>
+                <p class="skills__desc">A comprehensive toolkit for building modern, scalable web applications</p>
+            </div>
+
+            <!-- Top row: proficiency bars -->
+            <div class="skills__bars-wrap glass">
+                <p class="skills__bars-label">Core Proficiencies</p>
+                <div class="skills__bars">
+                    <div class="skill-bar">
+                        <div class="skill-bar__meta">
+                            <span class="skill-bar__name">Angular</span>
+                            <span class="skill-bar__pct">90%</span>
+                        </div>
+                        <div class="skill-bar__track">
+                            <div class="skill-bar__fill" style="--pct:90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar__meta">
+                            <span class="skill-bar__name">TypeScript / JavaScript</span>
+                            <span class="skill-bar__pct">85%</span>
+                        </div>
+                        <div class="skill-bar__track">
+                            <div class="skill-bar__fill" style="--pct:85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar__meta">
+                            <span class="skill-bar__name">HTML5 &amp; CSS3</span>
+                            <span class="skill-bar__pct">95%</span>
+                        </div>
+                        <div class="skill-bar__track">
+                            <div class="skill-bar__fill" style="--pct:95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar__meta">
+                            <span class="skill-bar__name">C++</span>
+                            <span class="skill-bar__pct">75%</span>
+                        </div>
+                        <div class="skill-bar__track">
+                            <div class="skill-bar__fill skill-bar__fill--purple" style="--pct:75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom row: category cards -->
+            <div class="skills__cards">
+
+                <!-- Frontend -->
+                <div class="sk-card glass">
+                    <div class="sk-card__icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                    </div>
+                    <h3 class="sk-card__title">Frontend</h3>
+                    <div class="sk-card__tags">
+                        <span class="sk-tag">Angular</span>
+                        <span class="sk-tag">TypeScript</span>
+                        <span class="sk-tag">JavaScript</span>
+                        <span class="sk-tag">HTML5</span>
+                        <span class="sk-tag">CSS3</span>
+                        <span class="sk-tag">Bootstrap</span>
+                        <span class="sk-tag">Tailwind</span>
+                    </div>
+                </div>
+
+                <!-- Programming -->
+                <div class="sk-card glass">
+                    <div class="sk-card__icon-wrap sk-card__icon-wrap--purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8" />
+                            <path d="M12 17v4" />
+                        </svg>
+                    </div>
+                    <h3 class="sk-card__title">Programming</h3>
+                    <div class="sk-card__tags">
+                        <span class="sk-tag">C++</span>
+                        <span class="sk-tag">Python</span>
+                        <span class="sk-tag sk-tag--learning">AI / ML basics</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="sk-card glass">
+                    <div class="sk-card__icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                    </div>
+                    <h3 class="sk-card__title">Tools</h3>
+                    <div class="sk-card__tags">
+                        <span class="sk-tag">Git &amp; GitHub</span>
+                        <span class="sk-tag">Postman</span>
+                        <span class="sk-tag">MySQL</span>
+                        <span class="sk-tag">Figma</span>
+                        <span class="sk-tag">VS Code</span>
+                    </div>
+                </div>
+
+                <!-- Methodologies -->
+                <div class="sk-card glass">
+                    <div class="sk-card__icon-wrap sk-card__icon-wrap--purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3 class="sk-card__title">Methodologies</h3>
+                    <div class="sk-card__tags">
+                        <span class="sk-tag">Agile</span>
+                        <span class="sk-tag">Code Reviews</span>
+                        <span class="sk-tag">Team Collaboration</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ============ CONTACT SECTION ============ -->
+    <section id="contact" class="contact">
+        <div class="contact__inner">
+            <span class="contact__eyebrow">Get in touch</span>
+            <h2 class="contact__title">Let's Work <span class="hero__title-gradient">Together</span></h2>
+            <p class="contact__desc">
+                Have a project in mind or just want to say hi? Fill in the form below and I'll get back to you soon.
+            </p>
+
+            <form class="contact__card glass" id="contactForm" action="https://formspree.io/f/xgojqrgl" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell me about your project..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary contact__submit">Send Message</button>
+                <p class="contact__status" id="formStatus"></p>
+            </form>
+
+            <div class="contact__links">
+                <a href="https://github.com/MostafaMo17" target="_blank" rel="noopener" class="contact__link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9c0-1.1.4-1.9 1-2.6-3.4-.4-7-1.7-7-7.4a5.8 5.8 0 0 1 1.5-4c-.2-.4-.7-2 .2-4 0 0 1.2-.4 4 1.5a13.7 13.7 0 0 1 7.3 0c2.7-1.9 3.9-1.5 3.9-1.5.8 2 .3 3.6.1 4a5.8 5.8 0 0 1 1.5 4c0 5.7-3.6 7-7 7.4.6.6 1 1.6 1 3.1V22" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/mustafa-mohamed-a89126382" target="_blank" rel="noopener"
+                    class="contact__link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4V8h4v1.5A5.9 5.9 0 0 1 16 8z" />
+                        <rect x="2" y="8" width="4" height="14" />
+                        <circle cx="4" cy="4" r="1.5" />
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
