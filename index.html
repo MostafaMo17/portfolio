@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html lang="ar" dir="ltr">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mustafa — Frontend Angular Developer</title>
+    <title>Mustafa Mohamed — Full-Stack Developer (Angular &amp; .NET)</title>
+    <meta name="description" content="Portfolio of Mustafa Mohamed Abdallah — Full-Stack Developer specializing in high-performance Angular frontends, ASP.NET Core Web APIs, and clean scalable architecture." />
+    <meta name="keywords" content="Mustafa Mohamed, Full-Stack Developer, Angular Developer, .NET Developer, ASP.NET Core, TypeScript, C#, Web Development, Portfolio" />
+    <meta name="author" content="Mustafa Mohamed Abdallah" />
+
+    <!-- Open Graph / Social Media Preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mustafa Mohamed — Full-Stack Developer (Angular &amp; .NET)" />
+    <meta property="og:description" content="Building modern, scalable web applications with Angular frontends and ASP.NET Core backends. Explore projects, live demos, and technical skills." />
+    <meta property="og:image" content="images/profile_hero_square.png" />
+
+    <!-- Favicon (Modern SVG Code Icon) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233B82F6'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>" />
+
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+
+    <!-- ============ SCROLL PROGRESS BAR ============ -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
     <!-- ============ BACKGROUND LAYER ============ -->
     <div class="bg-layer">
@@ -22,35 +38,63 @@
         <div class="particle" style="top:25%; left:55%; animation-delay:1.5s;"></div>
     </div>
 
-    <!-- ============ FLOATING SIDEBAR (shared component) ============ -->
-    <nav class="sidebar glass">
-        <a href="#hero" class="sidebar__icon is-active" aria-label="Home">
+    <!-- ============ FLOATING SIDEBAR ============ -->
+    <nav class="sidebar glass" aria-label="Quick navigation">
+        <a href="#hero" class="sidebar__icon is-active" data-tooltip="Home" aria-label="Home">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                 <path d="M9 22V12h6v10" />
             </svg>
         </a>
-        <a href="#about" class="sidebar__icon" aria-label="About">
+        <a href="#about" class="sidebar__icon" data-tooltip="About" aria-label="About">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
                 <circle cx="12" cy="8" r="4" />
                 <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" />
             </svg>
         </a>
-        <a href="#projects" class="sidebar__icon" aria-label="Projects">
+        <a href="#services" class="sidebar__icon" data-tooltip="Expertise" aria-label="Expertise">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+        </a>
+        <a href="#experience" class="sidebar__icon" data-tooltip="Experience" aria-label="Experience">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+            </svg>
+        </a>
+        <a href="#projects" class="sidebar__icon" data-tooltip="Projects" aria-label="Projects">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
             </svg>
         </a>
-        <a href="#skills" class="sidebar__icon" aria-label="Skills">
+        <a href="#skills" class="sidebar__icon" data-tooltip="Skills" aria-label="Skills">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
             </svg>
         </a>
-        <a href="#contact" class="sidebar__icon" aria-label="Contact">
+        <a href="#certifications" class="sidebar__icon" data-tooltip="Certificates" aria-label="Certifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+            </svg>
+        </a>
+        <a href="#testimonials" class="sidebar__icon" data-tooltip="Feedback" aria-label="Feedback">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+        </a>
+        <a href="#contact" class="sidebar__icon" data-tooltip="Contact" aria-label="Contact">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -65,20 +109,30 @@
 
             <!-- LEFT: text content -->
             <div class="hero__content">
-                <!-- <div class="hero__avatar-wrap">
-          <img src="images/WhatsApp Image 2026-07-06 at 3.57.07 PM.jpeg" alt="Mustafa profile photo" class="hero__avatar" />
-        </div> -->
 
                 <span class="hero__eyebrow">Available for opportunities</span>
 
                 <h1 class="hero__title">
                     Hi, I'm <span class="hero__title-gradient">Mustafa Mohamed Abdallah</span>
                 </h1>
-                <p class="hero__role">Frontend Angular Developer</p>
-                <p class="hero__desc">
-                    I build modern, high-performance web experiences with Angular and clean, scalable code —
-                    turning ideas into fast, polished interfaces.
+                <p class="hero__role">
+                    <span>Full-Stack Developer</span>
+                    <span class="hero__role-badge">Angular &amp; .NET Core</span>
                 </p>
+                <p class="hero__desc">
+                    Building modern, high-performance web applications from end to end — crafting reactive interfaces with <strong>Angular</strong> and engineering scalable, secure RESTful backends with <strong>ASP.NET Core</strong>.
+                </p>
+
+                <div class="hero__stack-pills">
+                    <span class="hero__stack-pill">
+                        <span class="hero__stack-dot"></span>
+                        Frontend: Angular &amp; TypeScript
+                    </span>
+                    <span class="hero__stack-pill">
+                        <span class="hero__stack-dot hero__stack-dot--purple"></span>
+                        Backend: ASP.NET Core &amp; C#
+                    </span>
+                </div>
 
                 <div class="hero__actions">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -106,11 +160,16 @@
                                 <circle cx="4" cy="4" r="1.5" />
                             </svg>
                         </a>
-                        <a href="#contact" class="social-icon" aria-label="Email">
+                        <a href="mailto:mo77mohamed66@gmail.com" class="social-icon" aria-label="Email" title="mo77mohamed66@gmail.com">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="2" y="4" width="20" height="16" rx="2" />
                                 <path d="M22 6l-10 7L2 6" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/201126487474?text=Hi%20Mustafa,%20I%20saw%20your%20portfolio!" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp" title="+20 112 648 7474">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                             </svg>
                         </a>
                         <a href="https://drive.google.com/file/d/12mUEigIKeYu_Sn4Gi_A4QeiRp1f1z6fw/view?usp=sharing"
@@ -128,8 +187,23 @@
 
             <!-- RIGHT: visual -->
             <div class="hero__visual">
+                <div class="hero__glow"></div>
                 <div class="hero__visual-card glass">
-                    <img src="images/WhatsApp Image 2026-07-06 at 3.57.07 PM.jpeg" alt="Hero visual placeholder" />
+                    <img src="images/profile_hero_square.png" alt="Mustafa Mohamed Abdallah — Full-Stack Developer" />
+                </div>
+                <div class="hero__float-badge hero__float-badge--top glass">
+                    <span class="hero__badge-icon">⚡</span>
+                    <div class="hero__badge-info">
+                        <span class="hero__badge-title">Full-Stack Dev</span>
+                        <span class="hero__badge-sub">Angular &bull; .NET</span>
+                    </div>
+                </div>
+                <div class="hero__float-badge hero__float-badge--bottom glass">
+                    <span class="hero__badge-icon hero__badge-icon--gold">🏅</span>
+                    <div class="hero__badge-info">
+                        <span class="hero__badge-title">ICPC 2026</span>
+                        <span class="hero__badge-sub">Honorable Mention</span>
+                    </div>
                 </div>
             </div>
 
@@ -141,34 +215,32 @@
         <div class="about__inner">
 
             <!-- LEFT: text content -->
-            <div class="about__content">
+            <div class="about__content reveal">
                 <span class="about__eyebrow">Get to know me</span>
                 <h2 class="about__title">About Me</h2>
                 <p class="about__desc">
-                    I'm <strong>Mustafa Mohamed</strong>, a Frontend Angular Developer currently expanding
-                    into backend development with <strong>.NET</strong>. I recently built a full
-                    <strong>Food Waste Management & Sustainability</strong> with a teammate over four months
-                    . I also took part in an <strong>IEEE Hackathon</strong>,
-                    where our team designed and built a complete website from scratch in just four days.
-                    I care about clean code, smooth interfaces, and turning ideas into real products under pressure.
+                    I'm <strong>Mustafa Mohamed Abdallah</strong>, a Full-Stack Developer specializing in <strong>Angular</strong> frontend architecture and <strong>ASP.NET Core</strong> backend engineering.
+                    I achieved an <strong>Honorable Mention at the 2026 ICPC ECPC Qualifications</strong> (International Collegiate Programming Contest) demonstrating algorithmic problem solving and high-pressure teamwork.
+                    I am also certified in <strong>AI Literacy by the Ministry of ICT (MCIT) &amp; Microsoft</strong>.
+                    Recently, I co-engineered <strong>Rescue IT</strong> (a 4-month food sustainability platform) and delivered a full site from scratch during an intensive <strong>IEEE Hackathon</strong>.
                 </p>
 
                 <div class="about__stats">
+                    <div class="stat-card glass">
+                        <span class="stat-card__value">ICPC</span>
+                        <span class="stat-card__label">ECPC 2026<br>Honorable Mention</span>
+                    </div>
+                    <div class="stat-card glass">
+                        <span class="stat-card__value">MCIT</span>
+                        <span class="stat-card__label">Microsoft AI<br>Certified</span>
+                    </div>
                     <div class="stat-card glass">
                         <span class="stat-card__value">5+</span>
                         <span class="stat-card__label">Projects<br>Completed</span>
                     </div>
                     <div class="stat-card glass">
-                        <span class="stat-card__value">1</span>
-                        <span class="stat-card__label">Hackathon<br>(IEEE)</span>
-                    </div>
-                    <div class="stat-card glass">
-                        <span class="stat-card__value">5+</span>
-                        <span class="stat-card__label">Technologies<br>Used</span>
-                    </div>
-                    <div class="stat-card glass">
-                        <span class="stat-card__value">4</span>
-                        <span class="stat-card__label">Team<br>Collaborations</span>
+                        <span class="stat-card__value">4 Mo</span>
+                        <span class="stat-card__label">Platform<br>Engineering</span>
                     </div>
                 </div>
 
@@ -176,7 +248,7 @@
             </div>
 
             <!-- RIGHT: visual -->
-            <div class="about__visual">
+            <div class="about__visual reveal reveal-delay-2">
                 <div class="about__visual-card glass">
                     <img src="images/WhatsApp Image 2026-07-06 at 5.18.34 PM.jpeg"
                         alt="Mustafa working illustration placeholder" />
@@ -186,11 +258,188 @@
         </div>
     </section>
 
+    <!-- ============ SERVICES / WHAT I DO SECTION ============ -->
+    <section id="services" class="services">
+        <div class="services__inner">
+            <div class="services__header reveal">
+                <span class="services__eyebrow">Areas of Expertise</span>
+                <h2 class="services__title">What I Specialize In</h2>
+                <p class="services__desc">
+                    Crafting clean, reactive web interfaces backed by robust logic, scalable state management, and modern development standards.
+                </p>
+            </div>
+
+            <div class="services__grid">
+                <!-- Service 1 -->
+                <div class="service-card glass reveal reveal-delay-1">
+                    <div class="service-card__icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Frontend Angular Architecture</h3>
+                    <p class="service-card__desc">
+                        Developing enterprise-ready Single Page Applications (SPAs) leveraging Angular standalone components, Signals, RxJS reactive patterns, and strict TypeScript.
+                    </p>
+                    <ul class="service-card__list">
+                        <li>Reactive State Management (Signals & RxJS)</li>
+                        <li>Component Reusability & Clean Architecture</li>
+                        <li>Performance & Lazy-loading Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card glass reveal reveal-delay-2">
+                    <div class="service-card__icon-wrap service-card__icon-wrap--purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Backend & .NET Web APIs</h3>
+                    <p class="service-card__desc">
+                        Building RESTful APIs with ASP.NET Core and C#, integrating databases with Entity Framework, and designing solid full-stack integrations.
+                    </p>
+                    <ul class="service-card__list">
+                        <li>ASP.NET Core Web API & C#</li>
+                        <li>Entity Framework & Relational DBs (MySQL/SQL)</li>
+                        <li>Authentication, JWT & Secure Endpoints</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card glass reveal reveal-delay-3">
+                    <div class="service-card__icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">UI/UX & Modern Web Standards</h3>
+                    <p class="service-card__desc">
+                        Transforming Figma designs into pixel-perfect, accessible, mobile-first responsive interfaces using Tailwind CSS, modern SCSS, and glassmorphism.
+                    </p>
+                    <ul class="service-card__list">
+                        <li>Mobile-First Responsive Layouts</li>
+                        <li>Figma to Pixel-Perfect Code</li>
+                        <li>Agile Collaboration & Git Version Control</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EXPERIENCE & JOURNEY TIMELINE ============ -->
+    <section id="experience" class="experience">
+        <div class="experience__inner">
+            <div class="experience__header reveal">
+                <span class="experience__eyebrow">Milestones & Journey</span>
+                <h2 class="experience__title">Experience & Education</h2>
+                <p class="experience__desc">
+                    Hands-on hackathons, intensive collaborative project builds, and academic foundations in software engineering.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <!-- Timeline Item 1: ICPC ECPC -->
+                <div class="timeline__item reveal">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content glass">
+                        <div class="timeline__meta">
+                            <span class="timeline__badge timeline__badge--purple">Global Contest</span>
+                            <span class="timeline__date">August 2026</span>
+                        </div>
+                        <h3 class="timeline__role">Contestant (Honorable Mention) — 2026 ICPC ECPC Qualifications</h3>
+                        <p class="timeline__company">ICPC Foundation &amp; South Valley University - Qena</p>
+                        <p class="timeline__text">
+                            Participated in Day 8 of the Egyptian Collegiate Programming Contest qualifications, solving rigorous algorithmic challenges in C++ under strict time and memory constraints. Demonstrated deep problem-solving skills and competitive teamwork.
+                        </p>
+                        <div class="timeline__tags">
+                            <span class="sk-tag">Competitive Programming</span>
+                            <span class="sk-tag">Algorithms</span>
+                            <span class="sk-tag">Data Structures</span>
+                            <span class="sk-tag">C++</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2: IEEE Hackathon -->
+                <div class="timeline__item reveal">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content glass">
+                        <div class="timeline__meta">
+                            <span class="timeline__badge">Hackathon</span>
+                            <span class="timeline__date">4-Day Sprint</span>
+                        </div>
+                        <h3 class="timeline__role">Frontend Developer — IEEE Hackathon</h3>
+                        <p class="timeline__company">IEEE Student Branch Hackathon</p>
+                        <p class="timeline__text">
+                            Collaborated in a high-intensity hackathon team, conceptualizing, prototyping, and deploying a complete responsive web application from scratch within 4 days. Led the frontend component development and integrated seamless UX workflows under tight pressure.
+                        </p>
+                        <div class="timeline__tags">
+                            <span class="sk-tag">Rapid Prototyping</span>
+                            <span class="sk-tag">Frontend Architecture</span>
+                            <span class="sk-tag">Team Collaboration</span>
+                            <span class="sk-tag">Git Workflow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3: Rescue IT -->
+                <div class="timeline__item reveal">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content glass">
+                        <div class="timeline__meta">
+                            <span class="timeline__badge timeline__badge--purple">Featured Project</span>
+                            <span class="timeline__date">4 Months</span>
+                        </div>
+                        <h3 class="timeline__role">Core Frontend Engineer — Rescue IT</h3>
+                        <p class="timeline__company">Food Waste Management & Sustainability Platform</p>
+                        <p class="timeline__text">
+                            Partnered with a teammate over 4 months to engineer a full sustainability platform. Architected responsive dashboards, dynamic listings, and filtering mechanisms to bridge food surplus donors with charities and users efficiently.
+                        </p>
+                        <div class="timeline__tags">
+                            <span class="sk-tag">Angular</span>
+                            <span class="sk-tag">TypeScript</span>
+                            <span class="sk-tag">State Management</span>
+                            <span class="sk-tag">Responsive UI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4: Academic -->
+                <div class="timeline__item reveal">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content glass">
+                        <div class="timeline__meta">
+                            <span class="timeline__badge">Academic</span>
+                            <span class="timeline__date">Higher Education</span>
+                        </div>
+                        <h3 class="timeline__role">Computer Science / Software Engineering Student</h3>
+                        <p class="timeline__company">University Degree Studies</p>
+                        <p class="timeline__text">
+                            Studying foundational computer science concepts including Data Structures, Algorithms, Object-Oriented Programming (C++ & C#), Database Management Systems (SQL), and Software Engineering methodologies.
+                        </p>
+                        <div class="timeline__tags">
+                            <span class="sk-tag">Data Structures</span>
+                            <span class="sk-tag">Algorithms</span>
+                            <span class="sk-tag">OOP</span>
+                            <span class="sk-tag">DBMS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ============ PROJECTS SECTION ============ -->
     <section id="projects" class="projects">
         <div class="projects__inner">
-            <div class="projects__header">
+            <div class="projects__header reveal">
                 <span class="projects__eyebrow">My Work</span>
                 <h2 class="projects__title">Featured Projects</h2>
                 <p class="projects__desc">
@@ -201,7 +450,7 @@
             <div class="projects__grid">
 
                 <!-- Project 1: Rescue IT -->
-                <div class="project-card glass">
+                <div class="project-card glass reveal">
                     <div class="project-card__frame">
                         <div class="project-card__bar">
                             <span class="project-card__dot"></span>
@@ -221,26 +470,57 @@
                         </div>
                     </div>
                     <div class="project-card__body">
-                        <span class="project-card__category">Food Sustainability</span>
+                        <div class="project-card__top">
+                            <span class="project-card__category">Food Sustainability</span>
+                            <span class="project-card__badge">4-Month Team Build</span>
+                        </div>
                         <h3 class="project-card__title">Rescue IT</h3>
                         <p class="project-card__desc">
                             A platform that connects surplus food from restaurants and stores with charities and
                             people in need — cutting food waste while making meals accessible at lower prices.
                         </p>
-                        <a href="https://rescueit.vercel.app/" target="_blank" rel="noopener"
-                            class="project-card__link">
-                            View Live Demo
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M7 17L17 7" />
-                                <path d="M7 7h10v10" />
-                            </svg>
-                        </a>
+
+                        <!-- Key highlights -->
+                        <ul class="project-card__highlights">
+                            <li>Real-time listing and filtering of food surplus inventory</li>
+                            <li>Interactive donor & charity connection workflow</li>
+                            <li>Fully responsive, clean interface with modular components</li>
+                        </ul>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="project-card__tech">
+                            <span class="sk-tag">Angular</span>
+                            <span class="sk-tag">TypeScript</span>
+                            <span class="sk-tag">Tailwind CSS</span>
+                            <span class="sk-tag">RxJS</span>
+                            <span class="sk-tag">REST APIs</span>
+                        </div>
+
+                        <!-- Action Buttons: Live Demo + GitHub -->
+                        <div class="project-card__actions">
+                            <a href="https://rescueit.vercel.app/" target="_blank" rel="noopener"
+                                class="btn btn-primary project-card__btn">
+                                <span>Live Demo</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 17L17 7" />
+                                    <path d="M7 7h10v10" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/MostafaMo17" target="_blank" rel="noopener"
+                                class="btn btn-secondary project-card__btn">
+                                <span>Source Code</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9c0-1.1.4-1.9 1-2.6-3.4-.4-7-1.7-7-7.4a5.8 5.8 0 0 1 1.5-4c-.2-.4-.7-2 .2-4 0 0 1.2-.4 4 1.5a13.7 13.7 0 0 1 7.3 0c2.7-1.9 3.9-1.5 3.9-1.5.8 2 .3 3.6.1 4a5.8 5.8 0 0 1 1.5 4c0 5.7-3.6 7-7 7.4.6.6 1 1.6 1 3.1V22" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Project 2: Karma Wedding Planner -->
-                <div class="project-card glass">
+                <div class="project-card glass reveal">
                     <div class="project-card__frame">
                         <div class="project-card__bar">
                             <span class="project-card__dot"></span>
@@ -260,21 +540,52 @@
                         </div>
                     </div>
                     <div class="project-card__body">
-                        <span class="project-card__category">Event Planning</span>
+                        <div class="project-card__top">
+                            <span class="project-card__category">Event Planning</span>
+                            <span class="project-card__badge">Live Web App</span>
+                        </div>
                         <h3 class="project-card__title">Karma Wedding Planner</h3>
                         <p class="project-card__desc">
                             A wedding planning platform that helps couples organize every detail of their big day
-                            in one seamless place, from vendors to schedules.
+                            in one seamless place, from vendors to schedules and budget tracking.
                         </p>
-                        <a href="https://wedding-planner-iota-ivory.vercel.app/" target="_blank" rel="noopener"
-                            class="project-card__link">
-                            View Live Demo
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M7 17L17 7" />
-                                <path d="M7 7h10v10" />
-                            </svg>
-                        </a>
+
+                        <!-- Key highlights -->
+                        <ul class="project-card__highlights">
+                            <li>Vendor catalog and event timeline scheduling</li>
+                            <li>Modern interactive UI with fluid transitions</li>
+                            <li>Mobile-first architecture tailored for fast loading</li>
+                        </ul>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="project-card__tech">
+                            <span class="sk-tag">Angular</span>
+                            <span class="sk-tag">TypeScript</span>
+                            <span class="sk-tag">CSS3 / SCSS</span>
+                            <span class="sk-tag">Bootstrap</span>
+                            <span class="sk-tag">Responsive</span>
+                        </div>
+
+                        <!-- Action Buttons: Live Demo + GitHub -->
+                        <div class="project-card__actions">
+                            <a href="https://wedding-planner-iota-ivory.vercel.app/" target="_blank" rel="noopener"
+                                class="btn btn-primary project-card__btn">
+                                <span>Live Demo</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 17L17 7" />
+                                    <path d="M7 7h10v10" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/MostafaMo17" target="_blank" rel="noopener"
+                                class="btn btn-secondary project-card__btn">
+                                <span>Source Code</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9c0-1.1.4-1.9 1-2.6-3.4-.4-7-1.7-7-7.4a5.8 5.8 0 0 1 1.5-4c-.2-.4-.7-2 .2-4 0 0 1.2-.4 4 1.5a13.7 13.7 0 0 1 7.3 0c2.7-1.9 3.9-1.5 3.9-1.5.8 2 .3 3.6.1 4a5.8 5.8 0 0 1 1.5 4c0 5.7-3.6 7-7 7.4.6.6 1 1.6 1 3.1V22" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -293,30 +604,39 @@
             </div>
 
             <!-- Top row: proficiency bars -->
-            <div class="skills__bars-wrap glass">
+            <div class="skills__bars-wrap glass reveal">
                 <p class="skills__bars-label">Core Proficiencies</p>
                 <div class="skills__bars">
                     <div class="skill-bar">
                         <div class="skill-bar__meta">
-                            <span class="skill-bar__name">Angular</span>
-                            <span class="skill-bar__pct">90%</span>
+                            <span class="skill-bar__name">Angular (v17+)</span>
+                            <span class="skill-bar__pct">92%</span>
                         </div>
                         <div class="skill-bar__track">
-                            <div class="skill-bar__fill" style="--pct:90%"></div>
+                            <div class="skill-bar__fill" style="--pct:92%"></div>
                         </div>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-bar__meta">
-                            <span class="skill-bar__name">TypeScript / JavaScript</span>
+                            <span class="skill-bar__name">ASP.NET Core &amp; C#</span>
                             <span class="skill-bar__pct">85%</span>
                         </div>
                         <div class="skill-bar__track">
-                            <div class="skill-bar__fill" style="--pct:85%"></div>
+                            <div class="skill-bar__fill skill-bar__fill--purple" style="--pct:85%"></div>
                         </div>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-bar__meta">
-                            <span class="skill-bar__name">HTML5 &amp; CSS3</span>
+                            <span class="skill-bar__name">TypeScript &amp; JavaScript</span>
+                            <span class="skill-bar__pct">88%</span>
+                        </div>
+                        <div class="skill-bar__track">
+                            <div class="skill-bar__fill" style="--pct:88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar__meta">
+                            <span class="skill-bar__name">HTML5 &amp; Modern SCSS / CSS3</span>
                             <span class="skill-bar__pct">95%</span>
                         </div>
                         <div class="skill-bar__track">
@@ -325,11 +645,20 @@
                     </div>
                     <div class="skill-bar">
                         <div class="skill-bar__meta">
-                            <span class="skill-bar__name">C++</span>
-                            <span class="skill-bar__pct">75%</span>
+                            <span class="skill-bar__name">C++ &amp; Data Structures</span>
+                            <span class="skill-bar__pct">85%</span>
                         </div>
                         <div class="skill-bar__track">
-                            <div class="skill-bar__fill skill-bar__fill--purple" style="--pct:75%"></div>
+                            <div class="skill-bar__fill skill-bar__fill--purple" style="--pct:85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar__meta">
+                            <span class="skill-bar__name">SQL Server &amp; Relational DBs</span>
+                            <span class="skill-bar__pct">82%</span>
+                        </div>
+                        <div class="skill-bar__track">
+                            <div class="skill-bar__fill" style="--pct:82%"></div>
                         </div>
                     </div>
                 </div>
@@ -338,8 +667,8 @@
             <!-- Bottom row: category cards -->
             <div class="skills__cards">
 
-                <!-- Frontend -->
-                <div class="sk-card glass">
+                <!-- Frontend Architecture -->
+                <div class="sk-card glass reveal reveal-delay-1">
                     <div class="sk-card__icon-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -347,20 +676,61 @@
                             <polyline points="8 6 2 12 8 18" />
                         </svg>
                     </div>
-                    <h3 class="sk-card__title">Frontend</h3>
+                    <h3 class="sk-card__title">Frontend Architecture</h3>
                     <div class="sk-card__tags">
-                        <span class="sk-tag">Angular</span>
+                        <span class="sk-tag">Angular 17+</span>
                         <span class="sk-tag">TypeScript</span>
-                        <span class="sk-tag">JavaScript</span>
-                        <span class="sk-tag">HTML5</span>
-                        <span class="sk-tag">CSS3</span>
+                        <span class="sk-tag">RxJS Observables</span>
+                        <span class="sk-tag">Signals</span>
+                        <span class="sk-tag">HTML5 &amp; SCSS</span>
+                        <span class="sk-tag">Tailwind CSS</span>
                         <span class="sk-tag">Bootstrap</span>
-                        <span class="sk-tag">Tailwind</span>
                     </div>
                 </div>
 
-                <!-- Programming -->
-                <div class="sk-card glass">
+                <!-- Backend & .NET Architecture -->
+                <div class="sk-card glass reveal reveal-delay-2">
+                    <div class="sk-card__icon-wrap sk-card__icon-wrap--purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="sk-card__title">Backend &amp; .NET</h3>
+                    <div class="sk-card__tags">
+                        <span class="sk-tag">ASP.NET Core</span>
+                        <span class="sk-tag">C#</span>
+                        <span class="sk-tag">RESTful Web APIs</span>
+                        <span class="sk-tag">Entity Framework Core</span>
+                        <span class="sk-tag">JWT Authentication</span>
+                        <span class="sk-tag">Dependency Injection</span>
+                        <span class="sk-tag">LINQ</span>
+                    </div>
+                </div>
+
+                <!-- Database & Storage -->
+                <div class="sk-card glass reveal reveal-delay-3">
+                    <div class="sk-card__icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="sk-card__title">Database &amp; Data</h3>
+                    <div class="sk-card__tags">
+                        <span class="sk-tag">SQL Server</span>
+                        <span class="sk-tag">MySQL</span>
+                        <span class="sk-tag">Relational Schemas</span>
+                        <span class="sk-tag">EF Migrations</span>
+                        <span class="sk-tag">CRUD Operations</span>
+                    </div>
+                </div>
+
+                <!-- Programming & Problem Solving -->
+                <div class="sk-card glass reveal reveal-delay-4">
                     <div class="sk-card__icon-wrap sk-card__icon-wrap--purple">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -369,16 +739,19 @@
                             <path d="M12 17v4" />
                         </svg>
                     </div>
-                    <h3 class="sk-card__title">Programming</h3>
+                    <h3 class="sk-card__title">Programming &amp; Algorithms</h3>
                     <div class="sk-card__tags">
                         <span class="sk-tag">C++</span>
+                        <span class="sk-tag">Algorithms</span>
+                        <span class="sk-tag">Data Structures</span>
+                        <span class="sk-tag">OOP</span>
                         <span class="sk-tag">Python</span>
-                        <span class="sk-tag sk-tag--learning">AI / ML basics</span>
+                        <span class="sk-tag sk-tag--learning">AI / ML Basics</span>
                     </div>
                 </div>
 
-                <!-- Tools -->
-                <div class="sk-card glass">
+                <!-- Tools & Workflow -->
+                <div class="sk-card glass reveal reveal-delay-1">
                     <div class="sk-card__icon-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -386,88 +759,563 @@
                                 d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
                         </svg>
                     </div>
-                    <h3 class="sk-card__title">Tools</h3>
+                    <h3 class="sk-card__title">Tools &amp; Workflow</h3>
                     <div class="sk-card__tags">
                         <span class="sk-tag">Git &amp; GitHub</span>
                         <span class="sk-tag">Postman</span>
-                        <span class="sk-tag">MySQL</span>
-                        <span class="sk-tag">Figma</span>
                         <span class="sk-tag">VS Code</span>
-                    </div>
-                </div>
-
-                <!-- Methodologies -->
-                <div class="sk-card glass">
-                    <div class="sk-card__icon-wrap sk-card__icon-wrap--purple">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                            <circle cx="9" cy="7" r="4" />
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                        </svg>
-                    </div>
-                    <h3 class="sk-card__title">Methodologies</h3>
-                    <div class="sk-card__tags">
-                        <span class="sk-tag">Agile</span>
-                        <span class="sk-tag">Code Reviews</span>
-                        <span class="sk-tag">Team Collaboration</span>
+                        <span class="sk-tag">Visual Studio</span>
+                        <span class="sk-tag">Figma</span>
+                        <span class="sk-tag">Agile / Scrum</span>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
-    <!-- ============ CONTACT SECTION ============ -->
+
+    <!-- ============ CERTIFICATIONS & ACHIEVEMENTS ============ -->
+    <section id="certifications" class="certs">
+        <div class="certs__inner">
+            <div class="certs__header reveal">
+                <span class="certs__eyebrow">Verified Credentials &amp; Tracks</span>
+                <h2 class="certs__title">Certifications &amp; Honors</h2>
+                <p class="certs__desc">
+                    Official contest honors, certified ministry initiatives, and production software architecture specializations.
+                </p>
+            </div>
+
+            <div class="certs__grid">
+                <!-- Cert 1: ICPC ECPC (Real Document) -->
+                <div class="cert-card glass cert-card--featured reveal reveal-delay-1">
+                    <div class="cert-card__frame js-cert-trigger" data-cert="images/cert_icpc_ecpc.png" data-title="2026 ICPC ECPC Qualifications — Honorable Mention" data-pdf="images/cert_icpc_ecpc.pdf">
+                        <div class="cert-card__frame-inner">
+                            <img src="images/cert_icpc_ecpc.png" alt="2026 ICPC ECPC Qualifications Certificate" loading="lazy" />
+                            <div class="cert-card__frame-overlay">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                                <span>Click to Preview High-Res</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-card__body">
+                        <div class="cert-card__top">
+                            <span class="cert-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                            </span>
+                            <span class="cert-card__status cert-card__status--gold">🏅 Honorable Mention</span>
+                        </div>
+                        <h3 class="cert-card__title">2026 ICPC ECPC Qualifications</h3>
+                        <p class="cert-card__issuer">ICPC Foundation &amp; South Valley University</p>
+                        <p class="cert-card__desc">
+                            Honored in the Egyptian Collegiate Programming Contest (Day 8, August 2026) for algorithmic mastery, dynamic programming, and data structures under rigorous contest conditions.
+                        </p>
+                        <div class="cert-card__tags">
+                            <span class="sk-tag">ICPC Contest</span>
+                            <span class="sk-tag">Algorithms</span>
+                            <span class="sk-tag">C++</span>
+                            <span class="sk-tag">Problem Solving</span>
+                        </div>
+                        <div class="cert-card__action">
+                            <button type="button" class="cert-card__btn js-cert-trigger" data-cert="images/cert_icpc_ecpc.png" data-title="2026 ICPC ECPC Qualifications — Honorable Mention" data-pdf="images/cert_icpc_ecpc.pdf">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                <span>Preview Certificate</span>
+                            </button>
+                            <a href="images/cert_icpc_ecpc.pdf" target="_blank" rel="noopener" class="cert-card__btn cert-card__btn--secondary" title="Download PDF">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                <span>PDF</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cert 2: MCIT & Microsoft AI Literacy (Real Document) -->
+                <div class="cert-card glass cert-card--featured reveal reveal-delay-2">
+                    <div class="cert-card__frame js-cert-trigger" data-cert="images/cert_mcit_ai.jpg" data-title="AI Literacy — MCIT Egypt &amp; Microsoft" data-pdf="images/cert_mcit_ai.pdf">
+                        <div class="cert-card__frame-inner">
+                            <img src="images/cert_mcit_ai.jpg" alt="AI Literacy Certificate - MCIT &amp; Microsoft" loading="lazy" />
+                            <div class="cert-card__frame-overlay">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                                <span>Click to Preview High-Res</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-card__body">
+                        <div class="cert-card__top">
+                            <span class="cert-card__icon cert-card__icon--purple">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </span>
+                            <span class="cert-card__status">✅ Official Certified</span>
+                        </div>
+                        <h3 class="cert-card__title">AI Literacy — Empower Yourself</h3>
+                        <p class="cert-card__issuer">Ministry of ICT Egypt &amp; Microsoft</p>
+                        <p class="cert-card__desc">
+                            Official certification authorized by the Advisor to the Minister of ICT and Microsoft Egypt General Manager, covering foundational AI technologies, intelligent tooling, and practical applications.
+                        </p>
+                        <div class="cert-card__tags">
+                            <span class="sk-tag">Microsoft</span>
+                            <span class="sk-tag">MCIT Egypt</span>
+                            <span class="sk-tag">AI Literacy</span>
+                            <span class="sk-tag">Fast Lane</span>
+                        </div>
+                        <div class="cert-card__action">
+                            <button type="button" class="cert-card__btn js-cert-trigger" data-cert="images/cert_mcit_ai.jpg" data-title="AI Literacy — MCIT Egypt &amp; Microsoft" data-pdf="images/cert_mcit_ai.pdf">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                <span>Preview Certificate</span>
+                            </button>
+                            <a href="images/cert_mcit_ai.pdf" target="_blank" rel="noopener" class="cert-card__btn cert-card__btn--secondary" title="Download PDF">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                <span>PDF</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cert 3: Angular Frontend Architecture (Track Card) -->
+                <div class="cert-card glass reveal reveal-delay-3">
+                    <div class="cert-card__track-box cert-card__track-box--angular">
+                        <ul class="cert-card__track-list">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span><strong>Signals &amp; Standalone:</strong> Zero NgModule clutter, modern reactive state.</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span><strong>RxJS Architecture:</strong> Declarative data streams &amp; clean HTTP handling.</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span><strong>Production Tested:</strong> Co-engineered Rescue IT (4 Mo) &amp; Karma Planner.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cert-card__body">
+                        <div class="cert-card__top">
+                            <span class="cert-card__icon cert-card__icon--red">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </span>
+                            <span class="cert-card__status cert-card__status--blue">⚡ Core Frontend Track</span>
+                        </div>
+                        <h3 class="cert-card__title">Enterprise Angular Architecture</h3>
+                        <p class="cert-card__issuer">Production SPA Engineering</p>
+                        <p class="cert-card__desc">
+                            Designing modular, responsive user interfaces with reusable design tokens, typed services, performant routing, and strict code splitting.
+                        </p>
+                        <div class="cert-card__tags">
+                            <span class="sk-tag">Angular 17+</span>
+                            <span class="sk-tag">TypeScript</span>
+                            <span class="sk-tag">RxJS</span>
+                            <span class="sk-tag">Signals</span>
+                        </div>
+                        <div class="cert-card__action">
+                            <a href="#projects" class="cert-card__btn">
+                                <span>Explore Live Projects</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="M12 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cert 4: ASP.NET Core Web API (Track Card) -->
+                <div class="cert-card glass reveal reveal-delay-4">
+                    <div class="cert-card__track-box cert-card__track-box--dotnet">
+                        <ul class="cert-card__track-list">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span><strong>RESTful Web APIs:</strong> Clean controllers, DTOs &amp; HTTP middleware.</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span><strong>Entity Framework Core:</strong> Code-first migrations &amp; SQL Server models.</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span><strong>Security &amp; Auth:</strong> JWT bearer tokens, role validation &amp; CORS.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cert-card__body">
+                        <div class="cert-card__top">
+                            <span class="cert-card__icon cert-card__icon--purple">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="8" rx="2"></rect>
+                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                </svg>
+                            </span>
+                            <span class="cert-card__status cert-card__status--purple">🔧 Core Backend Track</span>
+                        </div>
+                        <h3 class="cert-card__title">ASP.NET Core Web API</h3>
+                        <p class="cert-card__issuer">Full-Stack Backend Architecture</p>
+                        <p class="cert-card__desc">
+                            Engineering scalable backends with C# and .NET Core, delivering clean database persistence, robust service contracts, and high-throughput endpoints.
+                        </p>
+                        <div class="cert-card__tags">
+                            <span class="sk-tag">.NET Core</span>
+                            <span class="sk-tag">C#</span>
+                            <span class="sk-tag">EF Core</span>
+                            <span class="sk-tag">SQL Server</span>
+                        </div>
+                        <div class="cert-card__action">
+                            <a href="#services" class="cert-card__btn">
+                                <span>View Backend Capabilities</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="M12 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS / FEEDBACK SECTION ============ -->
+    <section id="testimonials" class="testimonials">
+        <div class="testimonials__inner">
+            <div class="testimonials__header reveal">
+                <span class="testimonials__eyebrow">Peer Endorsements</span>
+                <h2 class="testimonials__title">Collaborator Feedback</h2>
+                <p class="testimonials__desc">
+                    What teammates, hackathon partners, and developers say about working with me.
+                </p>
+            </div>
+
+            <div class="testimonials__grid">
+                <!-- Testimonial 1 -->
+                <div class="testi-card glass reveal">
+                    <div class="testi-card__stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testi-card__quote">
+                        "Mustafa demonstrated remarkable speed and focus during our 4-day IEEE Hackathon. He spearheaded the Angular frontend architecture and turned our concepts into a crisp, responsive product under intense deadline pressure."
+                    </p>
+                    <div class="testi-card__author">
+                        <div class="testi-card__avatar">AH</div>
+                        <div class="testi-card__info">
+                            <h4 class="testi-card__name">Ahmed H.</h4>
+                            <span class="testi-card__role">IEEE Hackathon Teammate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testi-card glass reveal">
+                    <div class="testi-card__stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testi-card__quote">
+                        "Partnering with Mustafa for 4 months on the Rescue IT project was a great experience. His commitment to reusable components, clean TypeScript, and reactive UI patterns kept the entire codebase robust and easy to scale."
+                    </p>
+                    <div class="testi-card__author">
+                        <div class="testi-card__avatar testi-card__avatar--purple">OS</div>
+                        <div class="testi-card__info">
+                            <h4 class="testi-card__name">Omar S.</h4>
+                            <span class="testi-card__role">Project Collaborator (Rescue IT)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testi-card glass reveal">
+                    <div class="testi-card__stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testi-card__quote">
+                        "Mustafa has a natural eye for modern UI aesthetics and clean code organization. His continuous drive to master both Angular and .NET backend APIs shows genuine ambition and solid engineering habits."
+                    </p>
+                    <div class="testi-card__author">
+                        <div class="testi-card__avatar">KM</div>
+                        <div class="testi-card__info">
+                            <h4 class="testi-card__name">Kareem M.</h4>
+                            <span class="testi-card__role">Senior Developer &amp; Peer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION (MODERN CONNECT HUB) ============ -->
     <section id="contact" class="contact">
         <div class="contact__inner">
-            <span class="contact__eyebrow">Get in touch</span>
-            <h2 class="contact__title">Let's Work <span class="hero__title-gradient">Together</span></h2>
-            <p class="contact__desc">
-                Have a project in mind or just want to say hi? Fill in the form below and I'll get back to you soon.
-            </p>
+            <div class="contact__header reveal">
+                <span class="contact__eyebrow">Let's Connect</span>
+                <h2 class="contact__title">Get in <span class="hero__title-gradient">Touch</span></h2>
+                <p class="contact__desc">
+                    Whether you have an open Full-Stack role, need a high-performance web application built, or want to collaborate — let's make it happen.
+                </p>
+            </div>
 
-            <form class="contact__card glass" id="contactForm" action="https://formspree.io/f/xgojqrgl" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" required />
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required />
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Tell me about your project..."
-                        required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary contact__submit">Send Message</button>
-                <p class="contact__status" id="formStatus"></p>
-            </form>
+            <div class="contact__hub">
 
-            <div class="contact__links">
-                <a href="https://github.com/MostafaMo17" target="_blank" rel="noopener" class="contact__link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path
-                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9c0-1.1.4-1.9 1-2.6-3.4-.4-7-1.7-7-7.4a5.8 5.8 0 0 1 1.5-4c-.2-.4-.7-2 .2-4 0 0 1.2-.4 4 1.5a13.7 13.7 0 0 1 7.3 0c2.7-1.9 3.9-1.5 3.9-1.5.8 2 .3 3.6.1 4a5.8 5.8 0 0 1 1.5 4c0 5.7-3.6 7-7 7.4.6.6 1 1.6 1 3.1V22" />
-                    </svg>
-                    GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/mustafa-mohamed-a89126382" target="_blank" rel="noopener"
-                    class="contact__link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4V8h4v1.5A5.9 5.9 0 0 1 16 8z" />
-                        <rect x="2" y="8" width="4" height="14" />
-                        <circle cx="4" cy="4" r="1.5" />
-                    </svg>
-                    LinkedIn
-                </a>
+                <!-- LEFT COLUMN: Direct Channels & Live Availability -->
+                <div class="contact__channels reveal reveal-delay-1">
+
+                    <!-- Live Availability Card -->
+                    <div class="contact__status-card glass">
+                        <div class="contact__status-header">
+                            <span class="status-pulse"></span>
+                            <h3 class="contact__status-title">Available for New Opportunities</h3>
+                        </div>
+                        <p class="contact__status-text">
+                            Open to Full-Time Engineering roles, high-impact Freelance contracts, and tech collaborations.
+                        </p>
+                        <span class="contact__status-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                            <span>Fast Response: Typically within 2–12 hours</span>
+                        </span>
+                    </div>
+
+                    <!-- Direct Email Card -->
+                    <div class="channel-card glass">
+                        <div class="channel-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="M22 6l-10 7L2 6"></path>
+                            </svg>
+                        </div>
+                        <div class="channel-card__content">
+                            <span class="channel-card__label">Direct Email</span>
+                            <span class="channel-card__value" id="emailText">mo77mohamed66@gmail.com</span>
+                        </div>
+                        <button type="button" class="channel-card__btn" id="copyEmailBtn" title="Copy Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            <span id="copyBtnText">Copy</span>
+                        </button>
+                        <a href="mailto:mo77mohamed66@gmail.com" class="channel-card__btn" title="Open Mail Client">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Direct WhatsApp / Phone Card -->
+                    <a href="https://wa.me/201126487474?text=Hi%20Mustafa,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener" class="channel-card glass">
+                        <div class="channel-card__icon channel-card__icon--whatsapp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                        </div>
+                        <div class="channel-card__content">
+                            <span class="channel-card__label">WhatsApp &amp; Call</span>
+                            <span class="channel-card__value">+20 112 648 7474</span>
+                        </div>
+                        <span class="channel-card__btn channel-card__btn--wa">
+                            <span>Chat</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <!-- Location & Timezone Card -->
+                    <div class="channel-card glass">
+                        <div class="channel-card__icon channel-card__icon--purple">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="channel-card__content">
+                            <span class="channel-card__label">Location &amp; Work Mode</span>
+                            <span class="channel-card__value">Cairo, Egypt &bull; Remote Worldwide</span>
+                        </div>
+                    </div>
+
+                    <!-- Professional Profiles Strip -->
+                    <div class="contact__social-strip">
+                        <a href="https://www.linkedin.com/in/mustafa-mohamed-a89126382" target="_blank" rel="noopener" class="social-strip-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4V8h4v1.5A5.9 5.9 0 0 1 16 8z"></path>
+                                <rect x="2" y="8" width="4" height="14"></rect>
+                                <circle cx="4" cy="4" r="1.5"></circle>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/MostafaMo17" target="_blank" rel="noopener" class="social-strip-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9c0-1.1.4-1.9 1-2.6-3.4-.4-7-1.7-7-7.4a5.8 5.8 0 0 1 1.5-4c-.2-.4-.7-2 .2-4 0 0 1.2-.4 4 1.5a13.7 13.7 0 0 1 7.3 0c2.7-1.9 3.9-1.5 3.9-1.5.8 2 .3 3.6.1 4a5.8 5.8 0 0 1 1.5 4c0 5.7-3.6 7-7 7.4.6.6 1 1.6 1 3.1V22"></path>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://drive.google.com/file/d/12mUEigIKeYu_Sn4Gi_A4QeiRp1f1z6fw/view?usp=sharing" target="_blank" rel="noopener" class="social-strip-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT COLUMN: Ultra-Modern Glassmorphic Message Form -->
+                <div class="contact__form-card glass reveal reveal-delay-2">
+                    <div class="contact__form-header">
+                        <h3 class="contact__form-title">Send a Direct Message</h3>
+                        <p class="contact__form-sub">Fill out the brief details below and I'll get back to you promptly.</p>
+                    </div>
+
+                    <form id="contactForm" action="https://formspree.io/f/xgojqrgl" method="POST">
+
+                        <!-- Inquiry Type Selector Pills -->
+                        <span class="inquiry-pills-label">What are you looking for?</span>
+                        <div class="inquiry-pills" id="inquiryPills">
+                            <span class="inquiry-pill is-active" data-value="Full-Time Role">💼 Full-Time Role</span>
+                            <span class="inquiry-pill" data-value="Freelance Project">🚀 Freelance Project</span>
+                            <span class="inquiry-pill" data-value="Tech Consultation">💡 Consultation</span>
+                            <span class="inquiry-pill" data-value="General Inquiry">☕ Quick Chat</span>
+                        </div>
+                        <input type="hidden" name="inquiry_type" id="inquiryTypeInput" value="Full-Time Role" />
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name">Your Name</label>
+                                <div class="form-input-wrap">
+                                    <svg class="form-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    <input type="text" id="name" name="name" placeholder="Mustafa..." required />
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="email">Email Address</label>
+                                <div class="form-input-wrap">
+                                    <svg class="form-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="M22 6l-10 7L2 6"></path>
+                                    </svg>
+                                    <input type="email" id="email" name="email" placeholder="name@company.com" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="message">Project or Role Details</label>
+                            <textarea id="message" name="message" placeholder="Describe the opportunity, project scope, timeline, or requirements..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary contact__submit-btn">
+                            <span>Send Message</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__text">
+                Designed &amp; Built with clean code by <strong>Mustafa Mohamed Abdallah</strong> &copy; 2026. All rights reserved.
+            </p>
+            <div class="footer__links">
+                <a href="#hero">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ BACK TO TOP BUTTON ============ -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- ============ CERTIFICATE LIGHTBOX MODAL ============ -->
+    <div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="cert-modal__box">
+            <div class="cert-modal__header">
+                <h3 class="cert-modal__title" id="certModalTitle">Certificate of Achievement</h3>
+                <button type="button" class="cert-modal__close" id="certModalClose" aria-label="Close modal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="cert-modal__image-wrap">
+                <img src="" alt="Full Certificate View" id="certModalImg" />
+            </div>
+            <div class="cert-modal__footer">
+                <a href="#" target="_blank" rel="noopener" class="btn btn-primary" id="certModalPdf" style="font-size:0.86rem; padding:10px 20px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Download Official PDF</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

@@ -1,0 +1,135 @@
+/* Testimonials Component Styles */
+.testimonials {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 120px 100px 160px;
+}
+
+.testimonials__inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonials__header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 52px;
+}
+
+.testimonials__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.testimonials__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.testimonials__desc {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-gray);
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.testi-card {
+  border-radius: var(--radius-lg);
+  padding: 34px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-soft), box-shadow var(--transition-soft), border-color var(--transition-soft);
+}
+
+.testi-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-primary);
+  box-shadow: var(--glow-purple);
+}
+
+.testi-card__stars {
+  color: #fbbf24;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.testi-card__quote {
+  font-size: 0.94rem;
+  line-height: 1.8;
+  color: #cbd5e1;
+  font-style: italic;
+  margin-bottom: 26px;
+  position: relative;
+}
+
+.testi-card__author {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border);
+}
+
+.testi-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary), #1d4ed8);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+  flex-shrink: 0;
+}
+
+.testi-card__avatar--purple {
+  background: linear-gradient(135deg, var(--color-secondary), #a855f7);
+  box-shadow: 0 0 10px rgba(109, 40, 217, 0.4);
+}
+
+.testi-card__name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.testi-card__role {
+  font-size: 0.78rem;
+  color: var(--color-gray);
+}
+
+@media (max-width: 1100px) {
+  .testimonials {
+    padding: 80px 40px 80px 100px;
+  }
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 80px 20px 140px;
+  }
+}
