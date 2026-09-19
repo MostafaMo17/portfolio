@@ -259,4 +259,31 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ==========================================
+  // 10) SKILLS INTERACTIVE CATEGORY FILTER
+  // ==========================================
+  const skillFilterBtns = document.querySelectorAll('.sk-filter-btn');
+  const skillTiles = document.querySelectorAll('.sk-tile');
+
+  if (skillFilterBtns.length && skillTiles.length) {
+    skillFilterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        skillFilterBtns.forEach((b) => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+
+        skillTiles.forEach((tile) => {
+          const cat = tile.getAttribute('data-cat');
+          if (filter === 'all' || cat === filter) {
+            tile.classList.remove('is-hidden');
+            tile.style.animation = 'tileFadeIn 0.32s ease forwards';
+          } else {
+            tile.classList.add('is-hidden');
+          }
+        });
+      });
+    });
+  }
 });
