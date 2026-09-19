@@ -1,4 +1,32 @@
 // Portfolio Interactive Engine - Mustafa Mohamed
+
+// ==========================================
+// SPLASH SCREEN — runs immediately on parse
+// 4 s visible → 0.85 s fade-out → removed from layout
+// ==========================================
+(function () {
+  const splash = document.getElementById('splashScreen');
+  if (!splash) return;
+
+  // Lock body scroll while splash is visible
+  document.body.style.overflow = 'hidden';
+
+  // After exactly 4 seconds, trigger the fade-out
+  const DISPLAY_MS  = 4000;   // how long splash stays visible
+  const FADE_OUT_MS = 850;    // must match CSS transition duration (0.85s)
+
+  setTimeout(() => {
+    splash.classList.add('is-done');            // triggers CSS opacity → 0
+
+    // After the fade-out completes, fully remove from layout & restore scroll
+    setTimeout(() => {
+      splash.style.display = 'none';
+      splash.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';       // re-enable scroll
+    }, FADE_OUT_MS);
+  }, DISPLAY_MS);
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 1) TYPEWRITER EFFECT FOR HERO TITLE

@@ -209,6 +209,173 @@ a {
 
 
 /* ==========================================================
+   8) SPLASH SCREEN
+   ========================================================== */
+#splashScreen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse 120% 100% at 50% 0%, #0d1b3e 0%, #050816 60%);
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: all;
+}
+
+#splashScreen.is-done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Ambient pulse rings */
+.splash__ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  animation: splashRingPulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+.splash__ring:nth-child(1) { width: 340px; height: 340px; animation-delay: 0s; }
+.splash__ring:nth-child(2) { width: 520px; height: 520px; animation-delay: 0.4s; border-color: rgba(109, 40, 217, 0.1); }
+.splash__ring:nth-child(3) { width: 700px; height: 700px; animation-delay: 0.8s; border-color: rgba(59, 130, 246, 0.06); }
+
+@keyframes splashRingPulse {
+  0%, 100% { transform: scale(1);    opacity: 0.6; }
+  50%       { transform: scale(1.04); opacity: 1; }
+}
+
+/* Rotating conic glow blob */
+.splash__blob {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: conic-gradient(from 200deg at 50% 50%, #3b82f6 0deg, #6d28d9 160deg, transparent 300deg);
+  filter: blur(90px);
+  opacity: 0.22;
+  animation: splashBlobSpin 12s linear infinite;
+  pointer-events: none;
+}
+@keyframes splashBlobSpin {
+  from { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.1); }
+  to   { transform: rotate(360deg) scale(1); }
+}
+
+/* Centre content fade+rise */
+.splash__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  animation: splashFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes splashFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Monogram pill */
+.splash__logo {
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.6rem;
+  background-image: linear-gradient(135deg, #60a5fa, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.25);
+  animation: splashLogoGlow 2.5s ease-in-out infinite alternate;
+}
+@keyframes splashLogoGlow {
+  from { box-shadow: 0 0 24px rgba(59, 130, 246, 0.2); }
+  to   { box-shadow: 0 0 50px rgba(109, 40, 217, 0.45); }
+}
+
+/* Eyebrow label */
+.splash__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #60a5fa;
+  opacity: 0.85;
+}
+
+/* Name headline */
+.splash__name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  background: linear-gradient(135deg, #f8fafc 30%, #93c5fd 70%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Role badge */
+.splash__role {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 999px;
+  padding: 7px 18px;
+}
+.splash__role-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3b82f6;
+  box-shadow: 0 0 8px #3b82f6;
+  animation: splashDotBlink 1.1s ease-in-out infinite;
+}
+@keyframes splashDotBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+/* Thin progress loader strip */
+.splash__loader {
+  width: 160px;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+  margin-top: 6px;
+}
+.splash__loader-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #3b82f6, #a855f7);
+  animation: splashLoad 4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes splashLoad {
+  0%   { width: 0%; }
+  100% { width: 100%; }
+}
+
+/* ==========================================================
    9) SCROLL REVEAL & INTER-SECTION ANIMATIONS
    ========================================================== */
 .reveal {
