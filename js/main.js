@@ -23,19 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 2) SCROLL PROGRESS BAR & BACK TO TOP
+  // 2) BACK TO TOP BUTTON
   // ==========================================
-  const progressBar = document.getElementById('scrollProgress');
   const backToTopBtn = document.getElementById('backToTop');
 
   const updateScrollState = () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-
-    if (progressBar) {
-      progressBar.style.width = `${scrollPercent}%`;
-    }
 
     if (backToTopBtn) {
       if (scrollTop > 380) {

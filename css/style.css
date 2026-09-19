@@ -207,20 +207,6 @@ a {
   box-shadow: var(--glow-blue);
 }
 
-/* ==========================================================
-   8) SCROLL PROGRESS BAR
-   ========================================================== */
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3.5px;
-  width: 0%;
-  background: linear-gradient(90deg, var(--color-primary), #a855f7);
-  z-index: 9999;
-  box-shadow: 0 0 12px rgba(59, 130, 246, 0.7);
-  transition: width 0.08s ease-out;
-}
 
 /* ==========================================================
    9) SCROLL REVEAL & INTER-SECTION ANIMATIONS
