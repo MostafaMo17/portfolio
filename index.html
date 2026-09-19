@@ -24,30 +24,6 @@
 <body>
 
 
-    <!-- ============ SPLASH SCREEN ============ -->
-    <div id="splashScreen" role="status" aria-label="Loading portfolio">
-        <!-- Decorative rings -->
-        <div class="splash__ring"></div>
-        <div class="splash__ring"></div>
-        <div class="splash__ring"></div>
-        <!-- Rotating glow blob -->
-        <div class="splash__blob"></div>
-        <!-- Centre content -->
-        <div class="splash__content">
-            <div class="splash__logo" aria-hidden="true">M</div>
-            <span class="splash__eyebrow">Portfolio &mdash; Full-Stack Developer</span>
-            <h1 class="splash__name">Mustafa Mohamed</h1>
-            <div class="splash__role">
-                <span class="splash__role-dot"></span>
-                Angular &bull; ASP.NET Core &bull; C#
-            </div>
-            <!-- Progress bar synced to 4 s JS timeout -->
-            <div class="splash__loader" aria-hidden="true">
-                <div class="splash__loader-bar"></div>
-            </div>
-        </div>
-    </div>
-
     <!-- ============ BACKGROUND LAYER ============ -->
     <div class="bg-layer">
         <div class="beam beam--blue"></div>
@@ -1335,70 +1311,246 @@
     </section>
 
     <!-- ============ TESTIMONIALS / FEEDBACK SECTION ============ -->
-    <section id="testimonials" class="testimonials">
-        <div class="testimonials__inner">
-            <div class="testimonials__header reveal">
-                <span class="testimonials__eyebrow">Peer Endorsements</span>
+<section id="testimonials" class="testimonials">
+    <div class="testimonials__inner">
+
+        <!-- Header with Action -->
+        <div class="testimonials__header reveal">
+            <div class="testimonials__header-content">
+                <span class="testimonials__eyebrow">Peer Endorsements &amp; Recommendations</span>
                 <h2 class="testimonials__title">Collaborator Feedback</h2>
                 <p class="testimonials__desc">
-                    What teammates, hackathon partners, and developers say about working with me.
+                    Honest feedback from project partners, tech teammates, and developers who collaborated with me on real-world projects.
                 </p>
             </div>
 
-            <div class="testimonials__grid">
-                <!-- Testimonial 1 -->
-                <div class="testi-card glass reveal">
-                    <div class="testi-card__stars">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="testi-card__quote">
-                        "Mustafa demonstrated remarkable speed and focus during our 4-day IEEE Hackathon. He spearheaded the Angular frontend architecture and turned our concepts into a crisp, responsive product under intense deadline pressure."
-                    </p>
-                    <div class="testi-card__author">
-                        <div class="testi-card__avatar">AH</div>
-                        <div class="testi-card__info">
-                            <h4 class="testi-card__name">Ahmed H.</h4>
-                            <span class="testi-card__role">IEEE Hackathon Teammate</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="testimonials__header-action">
+                <button type="button" class="btn btn-primary testi-add-btn js-open-recommend-modal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <span>Add Recommendation</span>
+                </button>
+            </div>
+        </div>
 
-                <!-- Testimonial 2 -->
-                <div class="testi-card glass reveal">
-                    <div class="testi-card__stars">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="testi-card__quote">
-                        "Partnering with Mustafa for 4 months on the Rescue IT project was a great experience. His commitment to reusable components, clean TypeScript, and reactive UI patterns kept the entire codebase robust and easy to scale."
-                    </p>
-                    <div class="testi-card__author">
-                        <div class="testi-card__avatar testi-card__avatar--purple">OS</div>
-                        <div class="testi-card__info">
-                            <h4 class="testi-card__name">Omar S.</h4>
-                            <span class="testi-card__role">Project Collaborator (Rescue IT)</span>
-                        </div>
-                    </div>
+        <!-- Social Proof Metrics Bar -->
+        <div class="testimonials__metrics glass reveal">
+            <div class="testi-metric">
+                <span class="testi-metric__stars">★★★★★</span>
+                <div class="testi-metric__info">
+                    <strong>5.0 / 5.0 Rating</strong>
+                    <span>Peer Collaboration Score</span>
                 </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testi-card glass reveal">
-                    <div class="testi-card__stars">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="testi-card__quote">
-                        "Mustafa has a natural eye for modern UI aesthetics and clean code organization. His continuous drive to master both Angular and .NET backend APIs shows genuine ambition and solid engineering habits."
-                    </p>
-                    <div class="testi-card__author">
-                        <div class="testi-card__avatar">KM</div>
-                        <div class="testi-card__info">
-                            <h4 class="testi-card__name">Kareem M.</h4>
-                            <span class="testi-card__role">Senior Developer &amp; Peer</span>
-                        </div>
-                    </div>
+            </div>
+            <div class="testi-metric__sep"></div>
+            <div class="testi-metric">
+                <div class="testi-metric__badge">100%</div>
+                <div class="testi-metric__info">
+                    <strong>High Recommendation</strong>
+                    <span>Would Partner Again</span>
+                </div>
+            </div>
+            <div class="testi-metric__sep"></div>
+            <div class="testi-metric">
+                <div class="testi-metric__icon-box">🤝</div>
+                <div class="testi-metric__info">
+                    <strong>Cross-Functional</strong>
+                    <span>Hackathons &amp; Enterprise Teams</span>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Grid of Testimonials -->
+        <div class="testimonials__grid" id="testimonialsGrid">
+
+            <!-- Testimonial 1 -->
+            <div class="testi-card glass reveal">
+                <!-- Decorative Watermark Quote -->
+                <div class="testi-card__watermark">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                </div>
+
+                <div class="testi-card__top">
+                    <div class="testi-card__stars" aria-label="5 stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <span class="testi-card__tag testi-card__tag--blue">IEEE Hackathon</span>
+                </div>
+
+                <p class="testi-card__quote">
+                    "Mustafa demonstrated remarkable speed and focus during our 4-day IEEE Hackathon. He spearheaded the Angular frontend architecture and turned our concepts into a crisp, responsive product under intense deadline pressure."
+                </p>
+
+                <div class="testi-card__author">
+                    <div class="testi-card__avatar">
+                        <span>AH</span>
+                    </div>
+                    <div class="testi-card__info">
+                        <div class="testi-card__name-row">
+                            <h4 class="testi-card__name">Ahmed H.</h4>
+                            <span class="testi-card__verified" title="Verified Teammate">✓ Verified</span>
+                        </div>
+                        <span class="testi-card__role">IEEE Hackathon Teammate</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testi-card glass reveal reveal-delay-1">
+                <div class="testi-card__watermark">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                </div>
+
+                <div class="testi-card__top">
+                    <div class="testi-card__stars" aria-label="5 stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <span class="testi-card__tag testi-card__tag--purple">Rescue IT Project</span>
+                </div>
+
+                <p class="testi-card__quote">
+                    "Partnering with Mustafa for 4 months on the Rescue IT project was a great experience. His commitment to reusable components, clean TypeScript, and reactive UI patterns kept the entire codebase robust and easy to scale."
+                </p>
+
+                <div class="testi-card__author">
+                    <div class="testi-card__avatar testi-card__avatar--purple">
+                        <span>OS</span>
+                    </div>
+                    <div class="testi-card__info">
+                        <div class="testi-card__name-row">
+                            <h4 class="testi-card__name">Omar S.</h4>
+                            <span class="testi-card__verified" title="Verified Partner">✓ Verified</span>
+                        </div>
+                        <span class="testi-card__role">Project Collaborator (Rescue IT)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testi-card glass reveal reveal-delay-2">
+                <div class="testi-card__watermark">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                </div>
+
+                <div class="testi-card__top">
+                    <div class="testi-card__stars" aria-label="5 stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <span class="testi-card__tag testi-card__tag--cyan">Architecture Peer</span>
+                </div>
+
+                <p class="testi-card__quote">
+                    "Mustafa has a natural eye for modern UI aesthetics and clean code organization. His continuous drive to master both Angular and .NET backend APIs shows genuine ambition and solid engineering habits."
+                </p>
+
+                <div class="testi-card__author">
+                    <div class="testi-card__avatar testi-card__avatar--cyan">
+                        <span>KM</span>
+                    </div>
+                    <div class="testi-card__info">
+                        <div class="testi-card__name-row">
+                            <h4 class="testi-card__name">Kareem M.</h4>
+                            <span class="testi-card__verified" title="Verified Peer">✓ Verified</span>
+                        </div>
+                        <span class="testi-card__role">Senior Developer &amp; Peer</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Endorsement Invitation Strip -->
+        <div class="testimonials__invite glass reveal">
+            <div class="testi-invite__text">
+                <strong>Have we worked together on a project, team, or challenge?</strong>
+                <span>Your endorsement helps future partners know what it is like collaborating with Mustafa.</span>
+            </div>
+            <button type="button" class="btn btn-outline js-open-recommend-modal">
+                <span>Leave an Endorsement</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- ============ RECOMMENDATION SUBMISSION MODAL ============ -->
+    <div class="recommend-modal" id="recommendModal" aria-hidden="true" role="dialog" aria-labelledby="recommendModalTitle">
+        <div class="recommend-modal__backdrop js-close-recommend-modal"></div>
+        <div class="recommend-modal__dialog glass">
+            <div class="recommend-modal__header">
+                <div class="recommend-modal__title-group">
+                    <span class="recommend-modal__eyebrow">Peer Endorsement</span>
+                    <h3 class="recommend-modal__title" id="recommendModalTitle">Add a Recommendation for Mustafa</h3>
+                    <p class="recommend-modal__sub">Share your honest experience working with Mustafa on web projects or technical tasks.</p>
+                </div>
+                <button type="button" class="recommend-modal__close js-close-recommend-modal" aria-label="Close modal">&times;</button>
+            </div>
+
+            <form id="recommendForm" class="recommend-form">
+                <div class="recommend-form__grid">
+                    <div class="recommend-field">
+                        <label for="recName" class="recommend-label">Your Full Name <span class="req">*</span></label>
+                        <input type="text" id="recName" name="name" class="recommend-input" placeholder="e.g. John Doe" required maxlength="60" />
+                    </div>
+
+                    <div class="recommend-field">
+                        <label for="recRole" class="recommend-label">Your Role / Company <span class="req">*</span></label>
+                        <input type="text" id="recRole" name="role" class="recommend-input" placeholder="e.g. Tech Lead / Hackathon Partner" required maxlength="80" />
+                    </div>
+                </div>
+
+                <div class="recommend-form__grid">
+                    <div class="recommend-field">
+                        <label for="recRelation" class="recommend-label">Collaboration Context <span class="req">*</span></label>
+                        <select id="recRelation" name="relationship" class="recommend-input recommend-select" required>
+                            <option value="Colleague / Teammate">Colleague / Teammate</option>
+                            <option value="Client / Business Partner">Client / Business Partner</option>
+                            <option value="Tech Lead / Manager">Tech Lead / Manager</option>
+                            <option value="Hackathon Partner">Hackathon Partner</option>
+                            <option value="Peer Developer">Peer Developer</option>
+                        </select>
+                    </div>
+
+                    <div class="recommend-field">
+                        <label class="recommend-label">Rating <span class="req">*</span></label>
+                        <div class="recommend-stars-picker" id="recStarsPicker" role="radiogroup" aria-label="Rating">
+                            <button type="button" class="star-btn is-active" data-val="1" title="1 star">★</button>
+                            <button type="button" class="star-btn is-active" data-val="2" title="2 stars">★</button>
+                            <button type="button" class="star-btn is-active" data-val="3" title="3 stars">★</button>
+                            <button type="button" class="star-btn is-active" data-val="4" title="4 stars">★</button>
+                            <button type="button" class="star-btn is-active" data-val="5" title="5 stars">★</button>
+                            <span class="star-rating-text" id="recRatingText">5.0 (Exceptional)</span>
+                        </div>
+                        <input type="hidden" id="recRatingValue" name="rating" value="5" />
+                    </div>
+                </div>
+
+                <div class="recommend-field">
+                    <label for="recText" class="recommend-label">Your Recommendation / Feedback <span class="req">*</span></label>
+                    <textarea id="recText" name="feedback" class="recommend-input recommend-textarea" rows="4" placeholder="How did Mustafa contribute? (e.g. Angular development speed, clean .NET code, problem solving, reliability...)" required minlength="20"></textarea>
+                </div>
+
+                <div class="recommend-modal__footer">
+                    <button type="button" class="btn btn-secondary js-close-recommend-modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary recommend-submit-btn" id="recSubmitBtn">
+                        <span>Publish Recommendation ✨</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 
     <!-- ============ CONTACT SECTION (MODERN CONNECT HUB) ============ -->
     <section id="contact" class="contact">
